@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>A³ | Разработка сайтов под ключ</title>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
+
+      <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png" />
+
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <nav>
+         <div class="container">
+            <a href="#" class="logo">&lt;A³/&gt;</a>
+
+            <ul class="nav-links">
+               <li><a href="#about" data-nav="about">О нас</a></li>
+               <li><a href="#services" data-nav="services">Услуги</a></li>
+               <li><a href="#works" data-nav="works">Работы</a></li>
+               <li><a href="#contact" data-nav="contact">Контакты</a></li>
+               <li><a href="#contactForm" data-nav="contactForm">Заявка</a></li>
+            </ul>
+            <div class="controls">
+               <div class="lang-switch desktop-lang">
+                  <button class="lang-btn active" data-lang="ru">RU</button>
+                  <button class="lang-btn" data-lang="uk">UA</button>
+                  <button class="lang-btn" data-lang="en">EN</button>
+               </div>
+               <button
+                  class="theme-toggle"
+                  id="themeToggle"
+                  aria-label="Переключить тему"
+               >
+                  <i class="fas fa-moon"></i>
+               </button>
+            </div>
+            <a href="#contactForm" class="order-btn">Заказать</a>
+            <button class="hamburger" id="hamburgerBtn">
+               <span></span><span></span><span></span>
+            </button>
+         </div>
+      </nav>
+
+      <div class="mobile-nav" id="mobileNav">
+         <a href="#about" class="mobile-link" data-nav="about">О нас</a>
+         <a href="#services" class="mobile-link" data-nav="services">Услуги</a>
+         <a href="#works" class="mobile-link" data-nav="works">Работы</a>
+         <a href="#contact" class="mobile-link" data-nav="contact">Контакты</a>
+         <a href="#contactForm" class="mobile-link" data-nav="contactForm"
+            >Заявка</a
+         >
+         <div class="mobile-social">
+            <a href="https://tiktok.com/@USERNAME" target="_blank"
+               ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="https://t.me/USERNAME" target="_blank"
+               ><i class="fab fa-telegram"></i
+            ></a>
+            <a href="viber://chat?number=+71234567890" target="_blank"
+               ><i class="fab fa-viber"></i
+            ></a>
+            <a href="https://wa.me/71234567890" target="_blank"
+               ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="https://instagram.com/USERNAME" target="_blank"
+               ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://facebook.com/USERNAME" target="_blank"
+               ><i class="fab fa-facebook"></i
+            ></a>
+         </div>
+         <div class="mobile-lang">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="uk">UA</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+         </div>
+      </div>
+
+      <section class="hero">
+         <div class="container">
+            <div class="hero-grid">
+               <div class="fly-from-center">
+                  <div class="hero-badge">✨ Команда профессионалов ✨</div>
+                  <h1>
+                     <span>Делаем сайты,</span
+                     ><span class="accent-text">которые продают</span>
+                  </h1>
+                  <p>
+                     Лендинги, визитки, интернет-магазины — под ключ. Быстро,
+                     качественно, с душой.
+                  </p>
+                  <div class="hero-buttons">
+                     <a href="#contactForm" class="btn btn-primary"
+                        >🚀 Заказать сайт</a
+                     >
+                     <a href="#services" class="btn btn-outline"
+                        >Узнать услуги</a
+                     >
+                  </div>
+               </div>
+               <div class="hero-visual fly-from-center">
+                  <div class="floating-box">&lt;A³/&gt;</div>
+                  <div class="floating-icon1">⚡</div>
+                  <div class="floating-icon2">🎨</div>
+                  <div class="floating-icon3">💻</div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="about">
+         <div class="container">
+            <div class="about-content fade-up">
+               <h2 class="section-title">О нас</h2>
+               <p>
+                  <strong><span class="accent-logo">&lt;A³/&gt;</span></strong>
+                  — это команда разработчиков и дизайнеров, которые создают
+                  сайты, решающие задачи бизнеса. Мы любим яркий дизайн, быструю
+                  вёрстку и довольных клиентов. Работаем под ключ — от идеи до
+                  запуска. Ваш успех — наша главная цель!
+               </p>
+            </div>
+         </div>
+      </section>
+
+      <section id="services">
+         <div class="container">
+            <h2 class="section-title fade-up">Наши услуги</h2>
+            <p class="section-sub fade-up">Что мы делаем лучше всего</p>
+            <div class="services-grid">
+               <div class="service-card fade-up">
+                  <div class="service-icon">🎯</div>
+                  <h3>Лендинги</h3>
+                  <p>
+                     Одностраничные сайты для продаж с высокой конверсией.
+                     Идеально для запуска товаров и услуг.
+                  </p>
+               </div>
+               <div class="service-card fade-up">
+                  <div class="service-icon">💼</div>
+                  <h3>Сайты-визитки</h3>
+                  <p>
+                     Представьте свой бизнес или себя стильно. Адаптивно,
+                     современно, запоминающеся.
+                  </p>
+               </div>
+               <div class="service-card fade-up">
+                  <div class="service-icon">🛒</div>
+                  <h3>Интернет-магазины</h3>
+                  <p>
+                     Полноценные магазины с корзиной, фильтрами и оплатой. Под
+                     любой товар.
+                  </p>
+               </div>
+               <div class="service-card fade-up">
+                  <div class="service-icon">📱</div>
+                  <h3>Адаптивная вёрстка</h3>
+                  <p>
+                     Верстаем под любые устройства: ПК, планшеты, телефоны. Всё
+                     идеально работает везде.
+                  </p>
+               </div>
+               <div class="service-card fade-up">
+                  <div class="service-icon">🚀</div>
+                  <h3>Дизайн сайта</h3>
+                  <p>
+                     Быстрая сборка на Tilda с нуля или по вашему дизайну.
+                     Подключаем аналитику и формы.
+                  </p>
+               </div>
+               <div class="service-card fade-up">
+                  <div class="service-icon">⚙️</div>
+                  <h3>Техподдержка сайтов</h3>
+                  <p>
+                     Регулярные обновления, правки, бэкапы и защита. Ваш сайт
+                     всегда в идеальном состоянии.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="works">
+         <div class="container">
+            <h2 class="section-title fade-up">Наши работы</h2>
+            <p class="section-sub fade-up">
+               Реальные проекты, которые мы запустили
+            </p>
+            <div class="portfolio-grid">
+               <!-- Elena English -->
+               <a
+                  href="https://english-site-chi.vercel.app/"
+                  target="_blank"
+                  class="portfolio-card fade-up"
+               >
+                  <div class="portfolio-img-wrap">
+                     <img
+                        src="img/english-site.jpg"
+                        alt="Elena English"
+                        class="portfolio-img"
+                     />
+                     <div class="portfolio-hover">
+                        <span class="portfolio-visit"
+                           >Открыть сайт <i class="fas fa-arrow-right"></i
+                        ></span>
+                     </div>
+                  </div>
+                  <div class="portfolio-info">
+                     <span class="portfolio-tag">Сайт-визитка</span>
+                     <h3 class="portfolio-title">Elena English</h3>
+                     <p class="portfolio-desc">
+                        Сайт репетитора английского языка с онлайн‑записью и
+                        отзывами
+                     </p>
+                  </div>
+               </a>
+
+               <!-- Sofyx -->
+               <a
+                  href="https://sofyx.vercel.app/"
+                  target="_blank"
+                  class="portfolio-card fade-up"
+               >
+                  <div class="portfolio-img-wrap">
+                     <img
+                        src="img/sofyx-site.jpg"
+                        alt="Sofyx"
+                        class="portfolio-img"
+                     />
+                     <div class="portfolio-hover">
+                        <span class="portfolio-visit"
+                           >Открыть сайт <i class="fas fa-arrow-right"></i
+                        ></span>
+                     </div>
+                  </div>
+                  <div class="portfolio-info">
+                     <span class="portfolio-tag">Интернет-магазин</span>
+                     <h3 class="portfolio-title">Sofyx</h3>
+                     <p class="portfolio-desc">
+                        Маркетплейс товаров с каталогом, поиском и фильтрами
+                     </p>
+                  </div>
+               </a>
+
+               <!-- TrimZone -->
+               <a
+                  href="https://trimzone.vercel.app/"
+                  target="_blank"
+                  class="portfolio-card fade-up"
+               >
+                  <div class="portfolio-img-wrap">
+                     <img
+                        src="img/trimzone-site.jpg"
+                        alt="TrimZone"
+                        class="portfolio-img"
+                     />
+                     <div class="portfolio-hover">
+                        <span class="portfolio-visit"
+                           >Открыть сайт <i class="fas fa-arrow-right"></i
+                        ></span>
+                     </div>
+                  </div>
+                  <div class="portfolio-info">
+                     <span class="portfolio-tag">Лендинг</span>
+                     <h3 class="portfolio-title">TrimZone</h3>
+                     <p class="portfolio-desc">
+                        Сайт барбершопа с прайсом, услугами и онлайн-записью
+                     </p>
+                  </div>
+               </a>
+
+               <!-- MoviesBox -->
+               <a
+                  href="https://moviesbox.vercel.app/"
+                  target="_blank"
+                  class="portfolio-card fade-up"
+               >
+                  <div class="portfolio-img-wrap">
+                     <img
+                        src="img/moviesbox-site.jpg"
+                        alt="MoviesBox"
+                        class="portfolio-img"
+                     />
+                     <div class="portfolio-hover">
+                        <span class="portfolio-visit"
+                           >Открыть сайт <i class="fas fa-arrow-right"></i
+                        ></span>
+                     </div>
+                  </div>
+                  <div class="portfolio-info">
+                     <span class="portfolio-tag">Веб-приложение</span>
+                     <h3 class="portfolio-title">MoviesBox</h3>
+                     <p class="portfolio-desc">
+                        Кинотека с рейтингами, фильтрами и карточками фильмов
+                     </p>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </section>
+
+      <!-- contact -->
+      <section id="contact">
+         <div class="container">
+            <div class="contact-grid">
+               <div class="slide-left">
+                  <h2 class="section-title">Свяжитесь с нами</h2>
+                  <p class="section-sub">
+                     Мы на связи 24/7. Напишите — обсудим ваш проект
+                  </p>
+                  <div class="social-links">
+                     <a
+                        href="https://wa.me/380962363025"
+                        target="_blank"
+                        class="social-link"
+                        ><i class="fab fa-whatsapp"></i> WhatsApp</a
+                     >
+                     <a
+                        href="https://t.me/albertovich_alex"
+                        target="_blank"
+                        class="social-link"
+                        ><i class="fab fa-telegram"></i> Telegram</a
+                     >
+                     <a
+                        href="viber://chat?number=+380962363025"
+                        target="_blank"
+                        class="social-link"
+                        ><i class="fab fa-viber"></i> Viber</a
+                     >
+
+                     <a
+                        href="https://instagram.com/USERNAME"
+                        target="_blank"
+                        class="social-link"
+                        ><i class="fab fa-instagram"></i> Instagram</a
+                     >
+                     <a
+                        href="https://facebook.com/USERNAME"
+                        target="_blank"
+                        class="social-link"
+                        ><i class="fab fa-facebook"></i> Facebook</a
+                     >
+                     <a
+                        href="https://tiktok.com/@USERNAME"
+                        target="_blank"
+                        class="social-link"
+                        ><i class="fab fa-tiktok"></i> TikTok</a
+                     >
+                  </div>
+               </div>
+               <div class="contact-form slide-right" id="contactForm">
+                  <h3 style="margin-bottom: 20px">Отправить заявку</h3>
+                  <form id="requestForm">
+                     <div class="form-group">
+                        <input
+                           type="text"
+                           id="userName"
+                           placeholder="Ваше имя"
+                           required
+                        />
+                        <span class="error-msg" id="nameError"></span>
+                     </div>
+                     <div class="form-group">
+                        <input
+                           type="text"
+                           id="userContact"
+                           placeholder="Telegram / WhatsApp / Viber"
+                           required
+                        />
+                        <span class="error-msg" id="contactError"></span>
+                     </div>
+                     <div class="form-group">
+                        <textarea
+                           id="userMessage"
+                           placeholder="Кратко опишите задачу: какой сайт нужен, сроки, бюджет"
+                           required
+                           maxlength="99"
+                        ></textarea>
+                        <span class="char-counter" id="charCounter"
+                           >0 / 99</span
+                        >
+                        <span class="error-msg" id="messageError"></span>
+                     </div>
+                     <button type="submit" class="submit-btn" id="submitBtn">
+                        📩 Отправить →
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer>
+         <div class="container">
+            <p>&lt;A³/&gt; — делаем сайты, которые работают. 2025</p>
+         </div>
+      </footer>
+
+      <script src="notify.js"></script>
+      <script src="script.js"></script>
+   </body>
+</html>
