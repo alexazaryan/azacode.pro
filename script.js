@@ -90,7 +90,7 @@ const themeToggle = document.getElementById("themeToggle");
 const themeIcon = themeToggle ? themeToggle.querySelector("i") : null;
 
 // Проверяем сохранённую тему или используем светлую по умолчанию
-const savedTheme = localStorage.getItem("theme") || "light";
+const savedTheme = localStorage.getItem("theme") || "dark";
 document.documentElement.setAttribute("data-theme", savedTheme);
 if (themeIcon) {
    themeIcon.className = savedTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
@@ -598,7 +598,7 @@ if (userMessage) {
 // Инициализация темы при загрузке
 document.addEventListener("DOMContentLoaded", () => {
    // Убеждаемся, что тема применена
-   const theme = localStorage.getItem("theme") || "light";
+   const theme = localStorage.getItem("theme") || "dark";
    document.documentElement.setAttribute("data-theme", theme);
    if (themeIcon) {
       themeIcon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
@@ -613,7 +613,7 @@ const themeIconMobile = themeToggleMobile
 const themeLabel = document.querySelector(".mobile-theme-row span");
 
 // Получаем тему (дублируем, потому что savedTheme ещё не объявлена)
-const mobileSavedTheme = localStorage.getItem("theme") || "light";
+const mobileSavedTheme = localStorage.getItem("theme") || "dark";
 
 if (themeIconMobile) {
    themeIconMobile.className =
