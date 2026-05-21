@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
-      <title>A³ | Разработка сайтов под ключ</title>
+      <title>AzaCode | Разработка сайтов под ключ</title>
       <link
          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
          rel="stylesheet"
@@ -21,7 +21,7 @@
    <body>
       <nav>
          <div class="container">
-            <a href="#" class="logo">&lt;A³/&gt;</a>
+            <a href="#" class="logo">&lt;AzaCode/&gt;</a>
 
             <ul class="nav-links">
                <li><a href="#about" data-nav="about">О нас</a></li>
@@ -59,6 +59,14 @@
          <a href="#contactForm" class="mobile-link" data-nav="contactForm"
             >Заявка</a
          >
+
+         <div class="mobile-theme-row">
+            <span>Тёмная тема</span>
+            <button class="theme-toggle-mobile" id="themeToggleMobile">
+               <i class="fas fa-moon"></i>
+            </button>
+         </div>
+
          <div class="mobile-social">
             <a href="https://tiktok.com/@USERNAME" target="_blank"
                ><i class="fab fa-tiktok"></i
@@ -85,12 +93,13 @@
             <button class="lang-btn" data-lang="en">EN</button>
          </div>
       </div>
+      <div class="mobile-theme"></div>
 
       <section class="hero">
          <div class="container">
             <div class="hero-grid">
                <div class="fly-from-center">
-                  <div class="hero-badge">✨ Команда профессионалов ✨</div>
+                  <div class="hero-badge">✨ Студия цифровых продуктов ✨</div>
                   <h1>
                      <span>Делаем сайты,</span
                      ><span class="accent-text">которые продают</span>
@@ -109,7 +118,7 @@
                   </div>
                </div>
                <div class="hero-visual fly-from-center">
-                  <div class="floating-box">&lt;A³/&gt;</div>
+                  <div class="floating-box">&lt;AzaCode/&gt;</div>
                   <div class="floating-icon1">⚡</div>
                   <div class="floating-icon2">🎨</div>
                   <div class="floating-icon3">💻</div>
@@ -123,7 +132,9 @@
             <div class="about-content fade-up">
                <h2 class="section-title">О нас</h2>
                <p>
-                  <strong><span class="accent-logo">&lt;A³/&gt;</span></strong>
+                  <strong
+                     ><span class="accent-logo">&lt;AzaCode/&gt;</span></strong
+                  >
                   — это команда разработчиков и дизайнеров, которые создают
                   сайты, решающие задачи бизнеса. Мы любим яркий дизайн, быструю
                   вёрстку и довольных клиентов. Работаем под ключ — от идеи до
@@ -402,10 +413,12 @@
 
       <footer>
          <div class="container">
-            <p>&lt;A³/&gt; — делаем сайты, которые работают. 2025</p>
+            <p>&lt;AzaCode/&gt; — делаем сайты, которые работают. 2025</p>
          </div>
       </footer>
-
+      <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Наверх">
+         <i class="fas fa-arrow-up"></i>
+      </button>
       <script src="notify.js"></script>
       <script src="script.js"></script>
    </body>

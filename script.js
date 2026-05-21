@@ -114,7 +114,7 @@ if (themeToggle) {
 // ========== МУЛЬТИЯЗЫЧНОСТЬ ==========
 const translations = {
    ru: {
-      heroBadge: "✨ Команда профессионалов ✨",
+      heroBadge: "✨ Студия цифровых продуктов ✨",
       heroTitle1: "Делаем сайты,",
       heroTitle2: "которые продают",
       heroDesc:
@@ -170,10 +170,12 @@ const translations = {
       navWorks: "Работы",
       navContact: "Контакты",
       navOrder: "Заявка",
+      darkTheme: "Светлая тема",
+      lightTheme: "Тёмная тема",
       orderBtnText: "Заказать",
    },
    uk: {
-      heroBadge: "✨ Команда професіоналів ✨",
+      heroBadge: "✨ Студія цифрових продуктів ✨",
       heroTitle1: "Робимо сайти,",
       heroTitle2: "які продають",
       heroDesc:
@@ -226,10 +228,12 @@ const translations = {
       navWorks: "Роботи",
       navContact: "Контакти",
       navOrder: "Заявка",
+      darkTheme: "Світла тема",
+      lightTheme: "Темна тема",
       orderBtnText: "Замовити",
    },
    en: {
-      heroBadge: "✨ Professional Team ✨",
+      heroBadge: "✨ Digital Product Studio ✨",
       heroTitle1: "We build websites",
       heroTitle2: "that sell",
       heroDesc:
@@ -287,6 +291,8 @@ const translations = {
       navWorks: "Works",
       navContact: "Contact",
       navOrder: "Request",
+      darkTheme: "Light theme",
+      lightTheme: "Dark theme",
       orderBtnText: "Order",
    },
 };
@@ -422,6 +428,15 @@ function updateLanguage(lang) {
 
    const orderBtnNav = document.querySelector(".order-btn");
    if (orderBtnNav) orderBtnNav.textContent = t.orderBtnText;
+
+   // перевод кнопки темы в бургер меню начало
+   const themeLabel = document.querySelector(".mobile-theme-row span");
+   if (themeLabel) {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      themeLabel.textContent =
+         currentTheme === "dark" ? t.darkTheme : t.lightTheme;
+   }
+   // перевод кнопки темы в бургер меню конец
 }
 
 // Обработчики для кнопок языка
@@ -538,20 +553,6 @@ if (form) {
          "A³ — Разработка сайтов", // <-- название проекта в уведомлении
       );
 
-      // -----------------------------------------------------------------------------
-      // if (ok === "spam" || ok === true) {
-      //    submitBtn.classList.add("success");
-      //    submitBtn.innerHTML = "✓ Отправлено!";
-      //    submitBtn.disabled = true;
-      //    form.reset();
-      //    if (charCounter) charCounter.textContent = "0 / 99";
-      //    setTimeout(resetButton, 60000); // кнопка вернётся через минуту
-      // } else {
-      //    submitBtn.innerHTML = "❌ Попробуйте позже";
-      //    setTimeout(resetButton, 4000);
-      // }
-      // -----------------------------------------------------------------------------
-
       submitBtn.disabled = false;
 
       if (ok) {
@@ -603,3 +604,73 @@ document.addEventListener("DOMContentLoaded", () => {
       themeIcon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
    }
 });
+
+// удалить кнопка в бургер меню меняет тему// Мобильный переключатель темы
+const themeToggleMobile = document.getElementById("themeToggleMobile");
+const themeIconMobile = themeToggleMobile
+   ? themeToggleMobile.querySelector("i")
+   : null;
+const themeLabel = document.querySelector(".mobile-theme-row span");
+
+// Получаем тему (дублируем, потому что savedTheme ещё не объявлена)
+const mobileSavedTheme = localStorage.getItem("theme") || "light";
+
+if (themeIconMobile) {
+   themeIconMobile.className =
+      mobileSavedTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+}
+if (themeLabel) {
+   themeLabel.textContent =
+      mobileSavedTheme === "dark" ? "Светлая тема" : "Тёмная тема";
+}
+
+if (themeToggleMobile) {
+   themeToggleMobile.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+
+      // Обновляем десктопную иконку
+      if (themeIcon) {
+         themeIcon.className =
+            newTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+      }
+
+      // Обновляем мобильную иконку и текст
+      if (themeIconMobile) {
+         themeIconMobile.className =
+            newTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+      }
+      if (themeLabel) {
+         themeLabel.textContent =
+            newTheme === "dark" ? "Светлая тема" : "Тёмная тема";
+      }
+   });
+}
+//  стрелочка вверх на мобилке прокрутка вверх
+const scrollBtn = document.getElementById("scrollToTopBtn");
+let lastScrollY = window.scrollY;
+
+if (scrollBtn) {
+   window.addEventListener("scroll", function () {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 300 && currentScrollY > lastScrollY) {
+         // Скролл ВНИЗ и ниже 300px → показываем
+         scrollBtn.classList.add("show");
+      } else if (currentScrollY < lastScrollY) {
+         // Скролл ВВЕРХ → сразу скрываем
+         scrollBtn.classList.remove("show");
+      }
+
+      lastScrollY = currentScrollY;
+   });
+
+   scrollBtn.addEventListener("click", function () {
+      window.scrollTo({
+         top: 0,
+         behavior: "smooth",
+      });
+   });
+}

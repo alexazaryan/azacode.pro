@@ -514,7 +514,7 @@ nav .container {
    display: flex;
    align-items: center;
    justify-content: center;
-   font-size: 80px;
+   font-size: 42px;
    font-weight: 800;
    color: #fff;
    animation: float2 4s infinite;
@@ -794,6 +794,7 @@ footer {
    color: #fff;
 }
 
+.container-logo,
 .accent-logo {
    background: linear-gradient(
       135deg,
@@ -808,6 +809,10 @@ footer {
 }
 
 @media (max-width: 900px) {
+   .theme-toggle {
+      display: none;
+   }
+
    .hero-grid,
    .contact-grid {
       grid-template-columns: 1fr;
@@ -826,7 +831,7 @@ footer {
    .floating-box {
       width: 200px;
       height: 200px;
-      font-size: 60px;
+      font-size: 28px;
    }
    .services-grid {
       grid-template-columns: 1fr;
@@ -1012,6 +1017,9 @@ body {
 }
 
 @media (max-width: 700px) {
+   .logo {
+      font-size: 24px;
+   }
    .portfolio-grid {
       grid-template-columns: 1fr;
    }
@@ -1026,4 +1034,106 @@ body {
       transform: scale(1.06);
    }
 }
-/* мой */
+/* мой */ /* Красивый мобильный переключатель с иконками */
+.theme-toggle-mobile {
+   width: 60px;
+   height: 32px;
+   background: var(--border-light);
+   border-radius: 50px;
+   border: none;
+   cursor: pointer;
+   position: relative;
+   transition: all 0.3s ease;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 8px;
+}
+
+.theme-toggle-mobile i {
+   font-size: 14px;
+   z-index: 1;
+   transition: all 0.3s ease;
+   color: #fbbf24;
+}
+
+.theme-toggle-mobile::before {
+   content: "";
+   position: absolute;
+   width: 24px;
+   height: 24px;
+   background: white;
+   border-radius: 50%;
+   top: 4px;
+   left: 4px;
+   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .theme-toggle-mobile {
+   background: var(--pink);
+}
+
+[data-theme="dark"] .theme-toggle-mobile::before {
+   transform: translateX(28px);
+}
+
+[data-theme="dark"] .theme-toggle-mobile i {
+   color: #ffffff;
+}
+
+.mobile-theme-row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 14px 0;
+   font-weight: 600;
+   font-size: 18px;
+   color: var(--text-primary);
+   border-bottom: 1px solid var(--border-light);
+}
+
+/* ============================================================стрелка в низ */
+/* Кнопка прокрутки вверх */
+.scroll-to-top {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   width: 50px;
+   height: 50px;
+   background: linear-gradient(135deg, var(--pink), var(--orange));
+   color: white;
+   border: none;
+   border-radius: 50%;
+   cursor: pointer;
+   font-size: 24px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease;
+   z-index: 999;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top.show {
+   opacity: 1;
+   visibility: visible;
+}
+
+.scroll-to-top:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* На мобильных чуть меньше и ближе к краю */
+@media (max-width: 768px) {
+   .scroll-to-top {
+      width: 45px;
+      height: 45px;
+      bottom: 15px;
+      right: 15px;
+      font-size: 20px;
+   }
+}
