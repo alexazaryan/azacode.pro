@@ -109,13 +109,13 @@ const translations = {
    ru: {
       heroBadge: "✨ Студия цифровых продуктов ✨",
       heroTitle1: "Делаем сайты,",
-      heroTitle2: "которые продают",
-      heroDesc:
-         "Лендинги, визитки, интернет-магазины — под ключ. Быстро, качественно, с душой.",
+      heroTitle2: "которые увеличивают продажи",
+      heroDesc: "Сайты под ключ, которые работают на твой бизнес.",
       orderBtn: "🚀 Заказать сайт",
       servicesBtn: "Узнать услуги",
+      aboutTitle: "О нас",
       aboutText:
-         "<strong>&lt;A³/&gt;</strong> — это команда разработчиков и дизайнеров, которые создают сайты, решающие задачи бизнеса. Мы любим яркий дизайн, быструю вёрстку и довольных клиентов. Работаем под ключ — от идеи до запуска. Ваш успех — наша главная цель!",
+         " — это команда разработчиков и дизайнеров, которые создают сайты, решающие задачи бизнеса. Мы любим яркий дизайн, быструю вёрстку и довольных клиентов. Работаем под ключ — от идеи до запуска. Ваш успех — наша главная цель!",
       servicesTitle: "Наши услуги",
       servicesSub: "Что мы делаем лучше всего",
       landingTitle: "Лендинги",
@@ -132,7 +132,7 @@ const translations = {
          "Верстаем под любые устройства: ПК, планшеты, телефоны. Всё идеально работает везде.",
       tildaTitle: "Дизайн сайта",
       tildaDesc:
-         "Быстрая сборка на Tilda с нуля или по вашему дизайну. Подключаем аналитику и формы.",
+         "Быстрая сборка с нуля или по вашему дизайну. Подключаем аналитику и формы.",
       supportTitle: "Техподдержка сайтов",
       supportDesc:
          "Регулярные обновления, правки, бэкапы и защита. Ваш сайт всегда в идеальном состоянии.",
@@ -166,17 +166,19 @@ const translations = {
       darkTheme: "Светлая тема",
       lightTheme: "Тёмная тема",
       orderBtnText: "Заказать",
+      footerText: " — сайты, которые работают на вас. 2025",
    },
    uk: {
       heroBadge: "✨ Студія цифрових продуктів ✨",
       heroTitle1: "Робимо сайти,",
-      heroTitle2: "які продають",
-      heroDesc:
-         "Лендинги, візитки, інтернет-магазини — під ключ. Швидко, якісно, з душею.",
+      heroTitle2: "які збільшують продажі",
+      heroDesc: "Сайти під ключ, які працюють на твій бізнес.",
       orderBtn: "🚀 Замовити сайт",
       servicesBtn: "Дізнатись послуги",
+      aboutTitle: "Про нас",
       aboutText:
-         "<strong>&lt;A³/&gt;</strong> — це команда розробників та дизайнерів, які створюють сайти, що вирішують задачі бізнесу. Ми любимо яскравий дизайн, швидку верстку та задоволених клієнтів. Працюємо під ключ — від ідеї до запуску. Ваш успіх — наша головна мета!",
+         " — це команда розробників та дизайнерів, які створюють сайти, що вирішують задачі бізнесу. Ми любимо яскравий дизайн, швидку верстку та задоволених клієнтів. Працюємо під ключ — від ідеї до запуску. Ваш успіх — наша головна мета!",
+
       servicesTitle: "Наші послуги",
       servicesSub: "Що ми робимо найкраще",
       landingTitle: "Лендинги",
@@ -189,7 +191,7 @@ const translations = {
       adaptDesc: "Верстаємо під будь-які пристрої: ПК, планшети, телефони.",
       tildaTitle: "Дизайн сайту",
       tildaDesc:
-         "Швидка збірка на Tilda з нуля або за вашим дизайном. Підключаємо аналітику та форми.",
+         "Швидка збірка з нуля або за вашим дизайном. Підключаємо аналітику та форми.",
       supportTitle: "Техпідтримка сайтів",
       supportDesc:
          "Регулярні оновлення, правки, бекапи та захист. Ваш сайт завжди в ідеальному стані.",
@@ -224,17 +226,18 @@ const translations = {
       darkTheme: "Світла тема",
       lightTheme: "Темна тема",
       orderBtnText: "Замовити",
+      footerText: " — сайти, які працюють на вас. 2025",
    },
    en: {
       heroBadge: "✨ Digital Product Studio ✨",
       heroTitle1: "We build websites",
-      heroTitle2: "that sell",
-      heroDesc:
-         "Landing pages, business cards, online stores — turnkey. Fast, quality, with soul.",
+      heroTitle2: "that boost your sales",
+      heroDesc: "Turnkey websites that work for your business.",
       orderBtn: "🚀 Order website",
       servicesBtn: "View services",
+      aboutTitle: "About Us",
       aboutText:
-         "<strong>&lt;A³/&gt;</strong> is a team of developers and designers who create websites that solve business problems. We love bright design, fast coding, and happy clients. Turnkey work — from idea to launch. Your success is our main goal!",
+         " — is a team of developers and designers who create websites that solve business problems. We love bright design, fast coding, and happy clients. Turnkey work — from idea to launch. Your success is our main goal!",
       servicesTitle: "Our Services",
       servicesSub: "What we do best",
       landingTitle: "Landing Pages",
@@ -251,7 +254,7 @@ const translations = {
          "We build for any device: PC, tablets, phones. Everything works perfectly everywhere.",
       tildaTitle: "Website Design",
       tildaDesc:
-         "Fast assembly on Tilda from scratch or according to your design. Connecting analytics and forms.",
+         "Fast assembly from scratch or according to your design. Connecting analytics and forms.",
       supportTitle: "Website Support",
       supportDesc:
          "Regular updates, fixes, backups and protection. Your site is always in perfect condition.",
@@ -287,6 +290,7 @@ const translations = {
       darkTheme: "Light theme",
       lightTheme: "Dark theme",
       orderBtnText: "Order",
+      footerText: " — websites that work for you. 2025",
    },
 };
 
@@ -313,8 +317,11 @@ function updateLanguage(lang) {
    if (servicesBtn) servicesBtn.textContent = t.servicesBtn;
 
    // О нас
-   const aboutText = document.querySelector("#about .about-content p");
-   if (aboutText) aboutText.innerHTML = t.aboutText;
+   const aboutText = document.getElementById("aboutText");
+   if (aboutText) aboutText.textContent = t.aboutText;
+
+   const aboutTitle = document.querySelector("#about .section-title");
+   if (aboutTitle) aboutTitle.textContent = t.aboutTitle;
 
    // Услуги
    const servicesTitle = document.querySelector("#services .section-title");
@@ -429,7 +436,10 @@ function updateLanguage(lang) {
       themeLabel.textContent =
          currentTheme === "dark" ? t.darkTheme : t.lightTheme;
    }
-   // перевод кнопки темы в бургер меню конец
+
+   //footer перевод
+   const footerText = document.getElementById("footerText");
+   if (footerText) footerText.textContent = t.footerText;
 }
 
 // Обработчики для кнопок языка

@@ -16,7 +16,9 @@
       <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png" />
       <link rel="stylesheet" href="style.css" />
    </head>
+
    <body>
+      <!-- Навигация -->
       <nav>
          <div class="container">
             <a href="#" class="logo">&lt;AzaCode/&gt;</a>
@@ -67,6 +69,7 @@
          </div>
       </nav>
 
+      <!-- мобильное меню -->
       <div class="mobile-nav" id="mobileNav">
          <a href="#about" class="mobile-link" data-nav="about">О нас</a>
          <a href="#services" class="mobile-link" data-nav="services">Услуги</a>
@@ -111,6 +114,7 @@
       </div>
       <div class="mobile-theme"></div>
 
+      <!-- hero -->
       <section class="hero">
          <div class="container">
             <div class="hero-grid">
@@ -118,12 +122,11 @@
                   <div class="hero-badge">✨ Студия цифровых продуктов ✨</div>
                   <h1>
                      <span>Делаем сайты,</span
-                     ><span class="accent-text">которые продают</span>
+                     ><span class="accent-text"
+                        >которые увеличивают продажи</span
+                     >
                   </h1>
-                  <p>
-                     Лендинги, визитки, интернет-магазины — под ключ. Быстро,
-                     качественно, с душой.
-                  </p>
+                  <p>Сайты под ключ, которые работают на твой бизнес.</p>
                   <div class="hero-buttons">
                      <a href="#contactForm" class="btn btn-primary"
                         >🚀 Заказать сайт</a
@@ -143,6 +146,7 @@
          </div>
       </section>
 
+      <!-- О нас -->
       <section id="about">
          <div class="container">
             <div class="about-content fade-up">
@@ -151,15 +155,18 @@
                   <strong
                      ><span class="accent-logo">&lt;AzaCode/&gt;</span></strong
                   >
-                  — это команда разработчиков и дизайнеров, которые создают
-                  сайты, решающие задачи бизнеса. Мы любим яркий дизайн, быструю
-                  вёрстку и довольных клиентов. Работаем под ключ — от идеи до
-                  запуска. Ваш успех — наша главная цель!
+                  <span id="aboutText">
+                     — это команда разработчиков и дизайнеров, которые создают
+                     сайты, решающие задачи бизнеса. Мы любим яркий дизайн,
+                     быструю вёрстку и довольных клиентов. Работаем под ключ —
+                     от идеи до запуска. Ваш успех — наша главная цель!</span
+                  >
                </p>
             </div>
          </div>
       </section>
 
+      <!-- services -->
       <section id="services">
          <div class="container">
             <h2 class="section-title fade-up">Наши услуги</h2>
@@ -172,7 +179,7 @@
                      Одностраничные сайты для продаж с высокой конверсией.
                      Идеально для запуска товаров и услуг.
                   </p>
-                  <p class="service-price">от $100</p>
+                  <!-- <p class="service-price">от $100</p> -->
                </div>
                <div class="service-card fade-up">
                   <div class="service-icon">💼</div>
@@ -181,7 +188,7 @@
                      Представьте свой бизнес или себя стильно. Адаптивно,
                      современно, запоминающеся.
                   </p>
-                  <p class="service-price">от $150</p>
+                  <!-- <p class="service-price">от $150</p> -->
                </div>
                <div class="service-card fade-up">
                   <div class="service-icon">🛒</div>
@@ -190,7 +197,7 @@
                      Полноценные магазины с корзиной, фильтрами и оплатой. Под
                      любой товар.
                   </p>
-                  <p class="service-price">от $350</p>
+                  <!-- <p class="service-price">от $350</p> -->
                </div>
                <div class="service-card fade-up">
                   <div class="service-icon">📱</div>
@@ -199,16 +206,16 @@
                      Верстаем под любые устройства: ПК, планшеты, телефоны. Всё
                      идеально работает везде.
                   </p>
-                  <p class="service-price">включено в каждый проект</p>
+                  <!-- <p class="service-price">включено в каждый проект</p> -->
                </div>
                <div class="service-card fade-up">
                   <div class="service-icon">🚀</div>
                   <h3>Дизайн сайта</h3>
                   <p>
-                     Быстрая сборка на Tilda с нуля или по вашему дизайну.
-                     Подключаем аналитику и формы.
+                     Быстрая сборка с нуля или по вашему дизайну. Подключаем
+                     аналитику и формы.
                   </p>
-                  <p class="service-price">от $120</p>
+                  <!-- <p class="service-price">от $120</p> -->
                </div>
                <div class="service-card fade-up">
                   <div class="service-icon">⚙️</div>
@@ -217,12 +224,13 @@
                      Регулярные обновления, правки, бэкапы и защита. Ваш сайт
                      всегда в идеальном состоянии.
                   </p>
-                  <p class="service-price">от $30/мес</p>
+                  <!-- <p class="service-price">от $30/мес</p> -->
                </div>
             </div>
          </div>
       </section>
 
+      <!-- works -->
       <section id="works">
          <div class="container">
             <h2 class="section-title fade-up">Наши работы</h2>
@@ -335,6 +343,7 @@
          </div>
       </section>
 
+      <!-- contact -->
       <section id="contact">
          <div class="container">
             <div class="contact-grid">
@@ -363,6 +372,12 @@
                         ><i class="fab fa-viber"></i> Viber</a
                      >
                      <a
+                        href="https://tiktok.com/@USERNAME"
+                        target="_blank"
+                        class="social-link"
+                        ><i class="fab fa-tiktok"></i> TikTok</a
+                     >
+                     <a
                         href="https://instagram.com/USERNAME"
                         target="_blank"
                         class="social-link"
@@ -373,12 +388,6 @@
                         target="_blank"
                         class="social-link"
                         ><i class="fab fa-facebook"></i> Facebook</a
-                     >
-                     <a
-                        href="https://tiktok.com/@USERNAME"
-                        target="_blank"
-                        class="social-link"
-                        ><i class="fab fa-tiktok"></i> TikTok</a
                      >
                   </div>
                </div>
@@ -424,9 +433,14 @@
          </div>
       </section>
 
+      <!-- footer -->
       <footer>
          <div class="container">
-            <p>&lt;AzaCode/&gt; — делаем сайты, которые работают. 2025</p>
+            <p>
+               &lt;AzaCode/&gt;<span id="footerText">
+                  — сайты, которые работают на вас. 2025</span
+               >
+            </p>
          </div>
       </footer>
 

@@ -708,14 +708,6 @@ section {
    color: var(--pink);
 }
 
-/* .about-content {
-   background: var(--about-bg);
-   border-radius: 40px;
-   padding: 50px;
-   text-align: center;
-   transition: background 0.3s ease;
-} */
-
 .about-content p {
    font-size: 18px;
    line-height: 1.6;
@@ -1117,6 +1109,9 @@ body {
    .desktop-lang {
       display: none;
    }
+   .hero-visual {
+      display: none;
+   }
 
    /* Лого */
    .logo {
@@ -1229,7 +1224,7 @@ body {
 /* 2 блок плавное появление  */
 .about-content {
    background: var(--about-bg);
-   border-radius: 40px;
+   border-radius: 24px;
    padding: 50px;
    text-align: center;
    transition: all 0.7s ease;
