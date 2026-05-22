@@ -36,13 +36,6 @@ if (hamburger && mobileNav) {
          : "";
    });
 
-   //    document.querySelectorAll(".mobile-link").forEach((link) => {
-   //       link.addEventListener("click", () => {
-   //          hamburger.classList.remove("open");
-   //          mobileNav.classList.remove("open");
-   //          document.body.style.overflow = "";
-   //       });
-   //    });
    const closeMenu = () => {
       hamburger.classList.remove("open");
       mobileNav.classList.remove("open");
@@ -440,13 +433,64 @@ function updateLanguage(lang) {
 }
 
 // Обработчики для кнопок языка
-document.querySelectorAll(".lang-btn").forEach((btn) => {
+// Дропдаун языка в мобильной шапке
+const navLangMobile = document.getElementById("navLangMobile");
+const navLangTrigger = document.getElementById("navLangTrigger");
+const navLangCurrent = document.getElementById("navLangCurrent");
+
+const langLabels = { ru: "РУС", uk: "УКР", en: "ENG" };
+
+if (navLangTrigger) {
+   navLangTrigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navLangMobile.classList.toggle("open");
+   });
+   document.addEventListener("click", () => {
+      if (navLangMobile) navLangMobile.classList.remove("open");
+   });
+}
+
+// Опции в мобильном дропдауне
+document.querySelectorAll(".nav-lang-option").forEach((btn) => {
    btn.addEventListener("click", () => {
+      const lang = btn.dataset.lang;
+      document
+         .querySelectorAll(".nav-lang-option")
+         .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      if (navLangCurrent) navLangCurrent.textContent = langLabels[lang];
+      if (navLangMobile) navLangMobile.classList.remove("open");
+      // Синхронизируем .lang-btn везде
       document
          .querySelectorAll(".lang-btn")
          .forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      updateLanguage(btn.dataset.lang);
+      document
+         .querySelectorAll(`.lang-btn[data-lang="${lang}"]`)
+         .forEach((b) => b.classList.add("active"));
+      updateLanguage(lang);
+   });
+});
+
+// Обычные кнопки языка (десктоп + бургер меню)
+document.querySelectorAll(".lang-btn").forEach((btn) => {
+   btn.addEventListener("click", () => {
+      const lang = btn.dataset.lang;
+      document
+         .querySelectorAll(".lang-btn")
+         .forEach((b) => b.classList.remove("active"));
+      document
+         .querySelectorAll(`.lang-btn[data-lang="${lang}"]`)
+         .forEach((b) => b.classList.add("active"));
+      // Синхронизируем мобильный дропдаун
+      document
+         .querySelectorAll(".nav-lang-option")
+         .forEach((b) => b.classList.remove("active"));
+      const activeOpt = document.querySelector(
+         `.nav-lang-option[data-lang="${lang}"]`,
+      );
+      if (activeOpt) activeOpt.classList.add("active");
+      if (navLangCurrent) navLangCurrent.textContent = langLabels[lang];
+      updateLanguage(lang);
    });
 });
 

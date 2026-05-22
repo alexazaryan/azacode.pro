@@ -12,10 +12,8 @@
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       />
-
       <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png" />
-
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
@@ -30,6 +28,7 @@
                <li><a href="#contact" data-nav="contact">Контакты</a></li>
                <li><a href="#contactForm" data-nav="contactForm">Заявка</a></li>
             </ul>
+
             <div class="controls">
                <div class="lang-switch desktop-lang">
                   <button class="lang-btn active" data-lang="ru">RU</button>
@@ -44,7 +43,24 @@
                   <i class="fas fa-moon"></i>
                </button>
             </div>
+
             <a href="#contactForm" class="order-btn">Заказать</a>
+
+            <!-- Мобильный дропдаун языка -->
+            <div class="nav-lang-mobile" id="navLangMobile">
+               <button class="nav-lang-trigger" id="navLangTrigger">
+                  <span id="navLangCurrent">РУС</span>
+                  <i class="fas fa-chevron-down" id="navLangArrow"></i>
+               </button>
+               <div class="nav-lang-dropdown" id="navLangDropdown">
+                  <button class="nav-lang-option active" data-lang="ru">
+                     РУС
+                  </button>
+                  <button class="nav-lang-option" data-lang="uk">УКР</button>
+                  <button class="nav-lang-option" data-lang="en">ENG</button>
+               </div>
+            </div>
+
             <button class="hamburger" id="hamburgerBtn">
                <span></span><span></span><span></span>
             </button>
@@ -148,7 +164,6 @@
          <div class="container">
             <h2 class="section-title fade-up">Наши услуги</h2>
             <p class="section-sub fade-up">Что мы делаем лучше всего</p>
-            <!-- services-grid -->
             <div class="services-grid">
                <div class="service-card fade-up">
                   <div class="service-icon">🎯</div>
@@ -215,7 +230,6 @@
                Реальные проекты, которые мы запустили
             </p>
             <div class="portfolio-grid">
-               <!-- Elena English -->
                <a
                   href="https://english-site-chi.vercel.app/"
                   target="_blank"
@@ -242,8 +256,6 @@
                      </p>
                   </div>
                </a>
-
-               <!-- Sofyx -->
                <a
                   href="https://sofyx.vercel.app/"
                   target="_blank"
@@ -269,8 +281,6 @@
                      </p>
                   </div>
                </a>
-
-               <!-- TrimZone -->
                <a
                   href="https://trimzone.vercel.app/"
                   target="_blank"
@@ -296,8 +306,6 @@
                      </p>
                   </div>
                </a>
-
-               <!-- MoviesBox -->
                <a
                   href="https://moviesbox.vercel.app/"
                   target="_blank"
@@ -327,7 +335,6 @@
          </div>
       </section>
 
-      <!-- contact -->
       <section id="contact">
          <div class="container">
             <div class="contact-grid">
@@ -355,7 +362,6 @@
                         class="social-link"
                         ><i class="fab fa-viber"></i> Viber</a
                      >
-
                      <a
                         href="https://instagram.com/USERNAME"
                         target="_blank"
@@ -423,9 +429,11 @@
             <p>&lt;AzaCode/&gt; — делаем сайты, которые работают. 2025</p>
          </div>
       </footer>
+
       <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Наверх">
          <i class="fas fa-arrow-up"></i>
       </button>
+
       <script src="notify.js"></script>
       <script src="script.js"></script>
    </body>
