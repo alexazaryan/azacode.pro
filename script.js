@@ -131,6 +131,7 @@ const translations = {
       adaptDesc:
          "Верстаем под любые устройства: ПК, планшеты, телефоны. Всё идеально работает везде.",
       tildaTitle: "Дизайн сайта",
+      priceIncluded: "включено в каждый проект",
       tildaDesc:
          "Быстрая сборка с нуля или по вашему дизайну. Подключаем аналитику и формы.",
       supportTitle: "Техподдержка сайтов",
@@ -192,6 +193,7 @@ const translations = {
       tildaTitle: "Дизайн сайту",
       tildaDesc:
          "Швидка збірка з нуля або за вашим дизайном. Підключаємо аналітику та форми.",
+      priceIncluded: "включено в кожен проєкт",
       supportTitle: "Техпідтримка сайтів",
       supportDesc:
          "Регулярні оновлення, правки, бекапи та захист. Ваш сайт завжди в ідеальному стані.",
@@ -255,6 +257,7 @@ const translations = {
       tildaTitle: "Website Design",
       tildaDesc:
          "Fast assembly from scratch or according to your design. Connecting analytics and forms.",
+      priceIncluded: "included in every project",
       supportTitle: "Website Support",
       supportDesc:
          "Regular updates, fixes, backups and protection. Your site is always in perfect condition.",
@@ -346,6 +349,10 @@ function updateLanguage(lang) {
    if (serviceCards[3]) {
       serviceCards[3].querySelector("h3").textContent = t.adaptTitle;
       serviceCards[3].querySelector("p").textContent = t.adaptDesc;
+
+      //
+      const price = serviceCards[3].querySelector(".service-price");
+      if (price) price.textContent = t.priceIncluded;
    }
    if (serviceCards[4]) {
       serviceCards[4].querySelector("h3").textContent = t.tildaTitle;
