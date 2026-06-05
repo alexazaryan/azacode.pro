@@ -116,16 +116,17 @@ body {
       background: linear-gradient(135deg, var(--green), var(--yellow));
    }
 }
-
-.fly-from-center {
+/* анимация первого блока  */
+/* .fly-from-center {
    opacity: 0;
    transform: scale(0) rotate(360deg);
    transition: all 0.7s cubic-bezier(0.34, 1.2, 0.55, 1);
 }
+
 .fly-from-center.visible {
    opacity: 1;
    transform: scale(1) rotate(0);
-}
+} */
 
 .fade-up {
    opacity: 0;
@@ -1256,4 +1257,25 @@ body {
 .service-price {
    margin-top: auto;
    padding-top: 15px;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+.fly-from-center {
+   opacity: 0;
+   transform: translateX(-60px);
+   transition: all 0.7s cubic-bezier(0.34, 1.2, 0.55, 1);
+}
+
+.hero-grid .hero-visual {
+   transform: translateX(60px);
+}
+
+.fly-from-center.visible {
+   opacity: 1;
+   transform: translateX(0);
 }
