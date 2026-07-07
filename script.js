@@ -654,9 +654,15 @@ if (form) {
 }
 
 // Смена плейсхолдера в зависимости от выбранного способа связи
+const contactPlaceholders = {
+   Telegram: "+380 XX XXX XX XX",
+   Viber: "+380 XX XXX XX XX",
+   WhatsApp: "+380 XX XXX XX XX",
+};
+
 document.querySelectorAll('input[name="contactMethod"]').forEach((radio) => {
    radio.addEventListener("change", () => {
-      userContact.placeholder = radio.value;
+      userContact.placeholder = contactPlaceholders[radio.value];
       const methodError = document.getElementById("methodError");
       if (methodError) methodError.textContent = "";
    });
@@ -768,14 +774,3 @@ if (scrollBtn) {
       });
    });
 }
-
-// ========== ВЫБОР СПОСОБА СВЯЗИ ==========
-
-// Меняем плейсхолдер контакта в зависимости от выбранного способа
-document.querySelectorAll('input[name="contactMethod"]').forEach((radio) => {
-   radio.addEventListener("change", () => {
-      userContact.placeholder = radio.value;
-      const methodError = document.getElementById("methodError");
-      if (methodError) methodError.textContent = "";
-   });
-});
