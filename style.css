@@ -1351,3 +1351,8 @@ body {
       justify-content: center;
    }
 }
+
+/* Скрываем соцсети "скоро" (TikTok, Instagram, Facebook) в мобильном бургер-меню — вернутся сами, когда добавим рабочие ссылки и уберём этот стиль */
+.mobile-social a[style*="pointer-events: none"] {
+   display: none;
+}
