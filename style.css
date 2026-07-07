@@ -1260,11 +1260,7 @@ body {
 }
 
 /*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
+
 .fly-from-center {
    opacity: 0;
    transform: translateX(-60px);
@@ -1278,4 +1274,80 @@ body {
 .fly-from-center.visible {
    opacity: 1;
    transform: translateX(0);
+}
+
+/* раздел скоро */
+.soon-badge {
+   font-size: 10px;
+   background: var(--pink);
+   color: #fff;
+   padding: 2px 8px;
+   border-radius: 20px;
+   margin-left: 6px;
+   opacity: 1; /* чтобы бейдж не тускнел вместе со ссылкой */
+   font-weight: 700;
+}
+
+/* радио кнопка телеграм вайбер вацап  */
+.contact-method {
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+
+.radio-option {
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   padding: 10px 16px;
+   border: 2px solid var(--border-light);
+   border-radius: 40px;
+   cursor: pointer;
+   font-weight: 600;
+   font-size: 13px;
+   color: var(--text-primary);
+   background: var(--bg-secondary);
+   transition: all 0.3s;
+}
+
+.radio-option i {
+   font-size: 16px;
+}
+
+.radio-option input {
+   display: none;
+}
+
+.radio-option:hover {
+   border-color: var(--pink);
+}
+
+.radio-option:has(input:checked) {
+   background: linear-gradient(135deg, var(--pink), var(--orange));
+   border-color: transparent;
+   color: #fff;
+}
+
+.radio-label {
+   display: block;
+   font-size: 13px;
+   font-weight: 600;
+   color: var(--text-muted);
+   margin-bottom: 12px;
+}
+
+#methodError {
+   display: none;
+}
+
+/* тест  */
+@media (max-width: 480px) {
+   .contact-method {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+   }
+   .radio-option {
+      justify-content: center;
+   }
 }

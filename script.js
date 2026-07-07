@@ -162,6 +162,7 @@ const translations = {
       navAbout: "О нас",
       navServices: "Услуги",
       navWorks: "Работы",
+      contactMethodLabel: "Выберите удобную связь",
       navContact: "Контакты",
       navOrder: "Заявка",
       darkTheme: "Светлая тема",
@@ -224,6 +225,7 @@ const translations = {
       navServices: "Послуги",
       navWorks: "Роботи",
       navContact: "Контакти",
+      contactMethodLabel: "Оберіть зручний зв'язок",
       navOrder: "Заявка",
       darkTheme: "Світла тема",
       lightTheme: "Темна тема",
@@ -289,6 +291,7 @@ const translations = {
       navServices: "Services",
       navWorks: "Works",
       navContact: "Contact",
+      contactMethodLabel: "Choose your preferred contact",
       navOrder: "Request",
       darkTheme: "Light theme",
       lightTheme: "Dark theme",
@@ -404,8 +407,12 @@ function updateLanguage(lang) {
    const nameInput = document.querySelector("#userName");
    if (nameInput) nameInput.placeholder = t.namePlace;
 
-   const contactInput = document.querySelector("#userContact");
-   if (contactInput) contactInput.placeholder = t.contactPlace;
+   const contactMethodLabel = document.getElementById("contactMethodLabel");
+   if (contactMethodLabel)
+      contactMethodLabel.textContent = t.contactMethodLabel;
+
+   // const contactInput = document.querySelector("#userContact");
+   // if (contactInput) contactInput.placeholder = t.contactPlace;
 
    const messageTextarea = document.querySelector("#userMessage");
    if (messageTextarea) messageTextarea.placeholder = t.messagePlace;
@@ -536,6 +543,18 @@ if (userMessage && charCounter) {
 function validateForm() {
    let isValid = true;
 
+   // Валидация способа связи
+   const methodError = document.getElementById("methodError");
+   const methodChecked = document.querySelector(
+      'input[name="contactMethod"]:checked',
+   );
+   if (!methodChecked) {
+      methodError.textContent = "Выберите способ связи";
+      isValid = false;
+   } else {
+      methodError.textContent = "";
+   }
+
    // Валидация имени (не пустое, минимум 2 символа)
    const nameError = document.getElementById("nameError");
    if (!userName.value.trim()) {
@@ -605,13 +624,18 @@ if (form) {
       submitBtn.disabled = true;
       submitBtn.innerHTML = "⏳ Отправляем...";
 
+      const methodChecked = document.querySelector(
+         'input[name="contactMethod"]:checked',
+      );
+
       const ok = await sendTelegramNotification(
          {
             "👤 Имя": userName.value.trim(),
+            "📱 Способ связи": methodChecked.value,
             "📞 Контакт": userContact.value.trim(),
             "💬 Задача": userMessage.value.trim(),
          },
-         "A³ — Разработка сайтов", // <-- название проекта в уведомлении
+         "A³ — Разработка сайтов",
       );
 
       submitBtn.disabled = false;
@@ -628,6 +652,15 @@ if (form) {
       }
    });
 }
+
+// Смена плейсхолдера в зависимости от выбранного способа связи
+document.querySelectorAll('input[name="contactMethod"]').forEach((radio) => {
+   radio.addEventListener("change", () => {
+      userContact.placeholder = radio.value;
+      const methodError = document.getElementById("methodError");
+      if (methodError) methodError.textContent = "";
+   });
+});
 
 // Очистка ошибок при вводе
 if (userName) {
@@ -735,3 +768,14 @@ if (scrollBtn) {
       });
    });
 }
+
+// ========== ВЫБОР СПОСОБА СВЯЗИ ==========
+
+// Меняем плейсхолдер контакта в зависимости от выбранного способа
+document.querySelectorAll('input[name="contactMethod"]').forEach((radio) => {
+   radio.addEventListener("change", () => {
+      userContact.placeholder = radio.value;
+      const methodError = document.getElementById("methodError");
+      if (methodError) methodError.textContent = "";
+   });
+});

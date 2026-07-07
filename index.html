@@ -410,6 +410,7 @@
                         class="social-link"
                      >
                         <i class="fab fa-tiktok"></i> TikTok
+                        <span class="soon-badge">скоро</span>
                      </a>
                      <a
                         href="#"
@@ -417,6 +418,7 @@
                         class="social-link"
                      >
                         <i class="fab fa-instagram"></i> Instagram
+                        <span class="soon-badge">скоро</span>
                      </a>
                      <a
                         href="#"
@@ -424,6 +426,7 @@
                         class="social-link"
                      >
                         <i class="fab fa-facebook"></i> Facebook
+                        <span class="soon-badge">скоро</span>
                      </a>
                   </div>
                </div>
@@ -439,11 +442,51 @@
                         />
                         <span class="error-msg" id="nameError"></span>
                      </div>
+
+                     <!-- выбор связи  -->
+                     <div class="form-group">
+                     <label class="radio-label" id="contactMethodLabel">Выберите удобную связь</label>
+                        <div class="contact-method" id="contactMethod">
+                           <label class="radio-option">
+                              <input
+                                 type="radio"
+                                 name="contactMethod"
+                                 value="Telegram"
+                                 checked
+                                 required
+                              />
+                              <span
+                                 ><i class="fab fa-telegram"></i> Telegram</span
+                              >
+                           </label>
+                           <label class="radio-option">
+                              <input
+                                 type="radio"
+                                 name="contactMethod"
+                                 value="Viber"
+                              />
+                              <span><i class="fab fa-viber"></i> Viber</span>
+                           </label>
+                           <label class="radio-option">
+                              <input
+                                 type="radio"
+                                 name="contactMethod"
+                                 value="WhatsApp"
+                              />
+                              <span
+                                 ><i class="fab fa-whatsapp"></i> WhatsApp</span
+                              >
+                           </label>
+                        </div>
+                        <span class="error-msg" id="methodError"></span>
+                     </div>
+                     <!-- выбор связи  -->
+
                      <div class="form-group">
                         <input
                            type="text"
                            id="userContact"
-                           placeholder="Telegram / WhatsApp / Viber"
+                           placeholder="Telegram"
                            required
                         />
                         <span class="error-msg" id="contactError"></span>
