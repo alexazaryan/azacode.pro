@@ -641,6 +641,14 @@ if (form) {
       submitBtn.disabled = false;
 
       if (ok) {
+         // GA4: событие отправки формы
+         if (typeof gtag === "function") {
+            gtag("event", "form_submit", {
+               contact_method: methodChecked.value,
+               form_id: "requestForm",
+            });
+         }
+
          submitBtn.classList.add("success");
          submitBtn.innerHTML = "✓ Отправлено!";
          form.reset();
