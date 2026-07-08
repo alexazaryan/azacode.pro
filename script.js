@@ -647,6 +647,13 @@ if (form) {
                contact_method: methodChecked.value,
                form_id: "requestForm",
             });
+
+            // Google Ads: конверсия
+            gtag("event", "conversion", {
+               send_to: "AW-18307863906/4qMACLyJ5MwcEOKq75lE",
+               value: 1.0,
+               currency: "USD",
+            });
          }
 
          submitBtn.classList.add("success");
