@@ -52,6 +52,18 @@
    </head>
 
    <body>
+      <!-- Модалка выбора языка при первом заходе -->
+      <div class="lang-select-overlay" id="langSelectOverlay">
+         <div class="lang-select-modal">
+            <p class="lang-select-title">RU / UA</p>
+            <div class="lang-select-buttons">
+               <button class="lang-select-btn" data-lang="ru">Русский</button>
+               <button class="lang-select-btn" data-lang="uk">
+                  Українська
+               </button>
+            </div>
+         </div>
+      </div>
       <!-- Навигация -->
       <nav>
          <div class="container">
@@ -146,6 +158,10 @@
             <button class="lang-btn" data-lang="en">EN</button>
          </div>
       </div>
+
+      <!-- затемнение при открытии меню -->
+      <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
       <div class="mobile-theme"></div>
 
       <!-- hero -->
@@ -190,12 +206,37 @@
                      ><span class="accent-logo">&lt;AzaCode/&gt;</span></strong
                   >
                   <span id="aboutText">
-                     — это команда разработчиков и дизайнеров, которые создают
-                     сайты, решающие задачи бизнеса. Мы любим яркий дизайн,
-                     быструю вёрстку и довольных клиентов. Работаем под ключ —
-                     от идеи до запуска. Ваш успех — наша главная цель!</span
+                     — команда, которая делает лендинги, интернет-магазины и
+                     сайты, решающие задачи бизнеса. Пишем чистый код, который
+                     остаётся полностью вашим — без ежемесячной абонплаты и
+                     привязки к чужим платформам. Работаем под ключ, от идеи до
+                     запуска. На связи менеджер — Алекс, ты можешь написать
+                     мне:</span
                   >
                </p>
+               <div class="about-socials">
+                  <a
+                     href="https://t.me/albertovich_alex"
+                     target="_blank"
+                     aria-label="Telegram"
+                     class="about-social-icon telegram"
+                     ><i class="fab fa-telegram"></i
+                  ></a>
+                  <a
+                     href="viber://chat?number=+380962363025"
+                     target="_blank"
+                     aria-label="Viber"
+                     class="about-social-icon viber"
+                     ><i class="fab fa-viber"></i
+                  ></a>
+                  <a
+                     href="https://wa.me/380962363025"
+                     target="_blank"
+                     aria-label="WhatsApp"
+                     class="about-social-icon whatsapp"
+                     ><i class="fab fa-whatsapp"></i
+                  ></a>
+               </div>
             </div>
          </div>
       </section>

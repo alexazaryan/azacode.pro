@@ -1,3 +1,22 @@
+// Модалка выбора языка при первом заходе
+const langSelectOverlay = document.getElementById("langSelectOverlay");
+
+if (langSelectOverlay) {
+   const savedLangChoice = localStorage.getItem("lang");
+
+   if (savedLangChoice) {
+      langSelectOverlay.classList.add("hidden");
+   }
+
+   document.querySelectorAll(".lang-select-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+         const lang = btn.dataset.lang;
+         applyLang(lang);
+         langSelectOverlay.classList.add("hidden");
+      });
+   });
+}
+
 // Анимации при скролле
 const flyElements = document.querySelectorAll(".fly-from-center");
 const flyObserver = new IntersectionObserver(
@@ -28,9 +47,11 @@ const hamburger = document.getElementById("hamburgerBtn");
 const mobileNav = document.getElementById("mobileNav");
 
 if (hamburger && mobileNav) {
+   const mobileNavOverlay = document.getElementById("mobileNavOverlay"); // затемнение при открытии меню
    hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("open");
       mobileNav.classList.toggle("open");
+      if (mobileNavOverlay) mobileNavOverlay.classList.toggle("show"); // затемнение при открытии меню
       document.body.style.overflow = mobileNav.classList.contains("open")
          ? "hidden"
          : "";
@@ -39,6 +60,7 @@ if (hamburger && mobileNav) {
    const closeMenu = () => {
       hamburger.classList.remove("open");
       mobileNav.classList.remove("open");
+      if (mobileNavOverlay) mobileNavOverlay.classList.remove("show"); // затемнение при открытии меню
       document.body.style.overflow = "";
    };
 
@@ -51,6 +73,9 @@ if (hamburger && mobileNav) {
 
    const orderBtn = document.querySelector(".order-btn");
    if (orderBtn) orderBtn.addEventListener("click", closeMenu);
+   if (mobileNavOverlay) {
+      mobileNavOverlay.addEventListener("click", closeMenu);
+   }
 }
 
 // Активная навигация при скролле
@@ -115,7 +140,7 @@ const translations = {
       servicesBtn: "Узнать услуги",
       aboutTitle: "О нас",
       aboutText:
-         " — это команда разработчиков и дизайнеров, которые создают сайты, решающие задачи бизнеса. Мы любим яркий дизайн, быструю вёрстку и довольных клиентов. Работаем под ключ — от идеи до запуска. Ваш успех — наша главная цель!",
+         " — команда, которая делает лендинги, интернет-магазины и сайты, решающие задачи бизнеса. Пишем чистый код, который остаётся полностью вашим — без ежемесячной абонплаты и привязки к чужим платформам. Работаем под ключ, от идеи до запуска. На связи менеджер — Алекс, ты можешь написать мне:",
       servicesTitle: "Наши услуги",
       servicesSub: "Что мы делаем лучше всего",
       landingTitle: "Лендинги",
@@ -179,8 +204,7 @@ const translations = {
       servicesBtn: "Дізнатись послуги",
       aboutTitle: "Про нас",
       aboutText:
-         " — це команда розробників та дизайнерів, які створюють сайти, що вирішують задачі бізнесу. Ми любимо яскравий дизайн, швидку верстку та задоволених клієнтів. Працюємо під ключ — від ідеї до запуску. Ваш успіх — наша головна мета!",
-
+         " — команда, яка робить лендинги, інтернет-магазини та сайти, що вирішують задачі бізнесу. Пишемо чистий код, який залишається повністю вашим — без щомісячної абонплати та прив'язки до чужих платформ. Працюємо під ключ, від ідеї до запуску. На зв'язку менеджер — Алекс, ти можеш написати мені:",
       servicesTitle: "Наші послуги",
       servicesSub: "Що ми робимо найкраще",
       landingTitle: "Лендинги",
@@ -241,7 +265,7 @@ const translations = {
       servicesBtn: "View services",
       aboutTitle: "About Us",
       aboutText:
-         " — is a team of developers and designers who create websites that solve business problems. We love bright design, fast coding, and happy clients. Turnkey work — from idea to launch. Your success is our main goal!",
+         " — a team that builds landing pages, online stores, and websites that solve business problems. We write clean code that stays fully yours — no monthly fees, no lock-in to third-party platforms. Turnkey work, from idea to launch. Manager on duty — Alex, feel free to reach out:",
       servicesTitle: "Our Services",
       servicesSub: "What we do best",
       landingTitle: "Landing Pages",
@@ -464,6 +488,38 @@ const navLangCurrent = document.getElementById("navLangCurrent");
 
 const langLabels = { ru: "РУС", uk: "УКР", en: "ENG" };
 
+// Автоопределение языка по настройкам телефона/браузера
+function detectLang() {
+   const saved = localStorage.getItem("lang");
+   if (saved) return saved; // если юзер уже выбирал сам — не трогаем
+
+   const browserLang = navigator.language || navigator.userLanguage || "";
+   if (browserLang.startsWith("uk")) return "uk";
+   if (browserLang.startsWith("ru")) return "ru";
+   return "en";
+}
+
+function applyLang(lang) {
+   document
+      .querySelectorAll(".lang-btn")
+      .forEach((b) => b.classList.remove("active"));
+   document
+      .querySelectorAll(`.lang-btn[data-lang="${lang}"]`)
+      .forEach((b) => b.classList.add("active"));
+   document
+      .querySelectorAll(".nav-lang-option")
+      .forEach((b) => b.classList.remove("active"));
+   const activeOpt = document.querySelector(
+      `.nav-lang-option[data-lang="${lang}"]`,
+   );
+   if (activeOpt) activeOpt.classList.add("active");
+   if (navLangCurrent) navLangCurrent.textContent = langLabels[lang];
+   updateLanguage(lang);
+   localStorage.setItem("lang", lang);
+}
+
+applyLang(detectLang());
+
 if (navLangTrigger) {
    navLangTrigger.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -492,6 +548,7 @@ document.querySelectorAll(".nav-lang-option").forEach((btn) => {
          .querySelectorAll(`.lang-btn[data-lang="${lang}"]`)
          .forEach((b) => b.classList.add("active"));
       updateLanguage(lang);
+      localStorage.setItem("lang", lang);
    });
 });
 
@@ -515,6 +572,7 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
       if (activeOpt) activeOpt.classList.add("active");
       if (navLangCurrent) navLangCurrent.textContent = langLabels[lang];
       updateLanguage(lang);
+      localStorage.setItem("lang", lang);
    });
 });
 
