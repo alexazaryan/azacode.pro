@@ -615,12 +615,17 @@ function validateForm() {
 
    // Валидация имени (не пустое, минимум 2 символа)
    const nameError = document.getElementById("nameError");
+   const namePattern = /^[a-zA-Zа-яА-ЯёЁіІїЇєЄ\s'-]+$/;
    if (!userName.value.trim()) {
       nameError.textContent = "Введите ваше имя";
       userName.classList.add("error");
       isValid = false;
    } else if (userName.value.trim().length < 2) {
       nameError.textContent = "Имя должно содержать минимум 2 символа";
+      userName.classList.add("error");
+      isValid = false;
+   } else if (!namePattern.test(userName.value.trim())) {
+      nameError.textContent = "Имя может содержать только буквы";
       userName.classList.add("error");
       isValid = false;
    } else {
@@ -630,8 +635,18 @@ function validateForm() {
 
    // Валидация контакта (не пустое)
    const contactError = document.getElementById("contactError");
-   if (!userContact.value.trim()) {
+   const contactValue = userContact.value.trim();
+   const contactPattern = /^[a-zA-Zа-яА-Я0-9+@_.\s-]+$/;
+   if (!contactValue) {
       contactError.textContent = "Введите ваш Telegram, WhatsApp или Viber";
+      userContact.classList.add("error");
+      isValid = false;
+   } else if (contactValue.length < 5) {
+      contactError.textContent = "Слишком короткий контакт";
+      userContact.classList.add("error");
+      isValid = false;
+   } else if (!contactPattern.test(contactValue)) {
+      contactError.textContent = "Недопустимые символы в контакте";
       userContact.classList.add("error");
       isValid = false;
    } else {
