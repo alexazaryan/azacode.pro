@@ -101,6 +101,7 @@
             font-size: 13px;
             font-weight: 700;
             color: #1a1a1a;
+            text-align: center;
          }
 
          h1 {
@@ -126,8 +127,19 @@
             text-align: center;
             color: var(--text-secondary);
             font-size: 16px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             line-height: 1.5;
+         }
+
+         .price-row {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            text-align: center;
          }
 
          .card {
@@ -255,6 +267,19 @@
             margin-top: 4px;
          }
 
+         .site-link {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 12px;
+         }
+
+         .site-link a {
+            color: var(--pink);
+            text-decoration: underline;
+            margin-left: 4px;
+         }
+
          .trust-row {
             display: flex;
             justify-content: center;
@@ -352,18 +377,37 @@
       <div class="wrap">
          <div class="logo">&lt;AzaCode/&gt;</div>
          <div class="hero-badge" id="heroBadge">
-            ✨ Разработка сайтов под ключ ✨
+            🛡 Без предоплаты — платите после сдачи сайта
          </div>
          <h1>
             <span id="h1Part1">Нужен сайт,</span>
             <span class="accent" id="h1Part2">который продаёт?</span>
          </h1>
          <p class="sub" id="subText">
-            Заполните форму — мы напишем вам в выбранный мессенджер
+            Заполните форму — мы напишем вам в выбранный мессенджер в течение 15
+            минут
          </p>
+
+         <div class="price-row" id="priceRow">
+            <span id="price1">💻 Сайт-визитка от $150</span>
+            <span id="price2">🛒 Магазин от $350</span>
+         </div>
 
          <div class="card">
             <form id="requestForm">
+               <div
+                  style="position: absolute; left: -9999px; top: -9999px"
+                  aria-hidden="true"
+               >
+                  <input
+                     type="text"
+                     id="website"
+                     name="website"
+                     tabindex="-1"
+                     autocomplete="off"
+                  />
+               </div>
+
                <div class="form-group">
                   <input
                      type="text"
@@ -437,7 +481,12 @@
                </button>
             </form>
 
-            <div class="trust-row">
+            <p class="site-link" id="siteLink">
+               <span id="siteLinkText">Наш сайт</span>&nbsp;
+               <a href="https://azacode.pro" target="_blank">azacode.pro</a>
+            </p>
+
+            <!-- <div class="trust-row">
                <span
                   ><i class="fas fa-check-circle"></i>
                   <span id="trust1">Без предоплаты</span></span
@@ -446,7 +495,7 @@
                   ><i class="fas fa-code"></i>
                   <span id="trust2">Код — ваш</span></span
                >
-            </div>
+            </div> -->
          </div>
       </div>
 

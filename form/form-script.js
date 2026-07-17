@@ -1,29 +1,37 @@
 // ========== ПЕРЕВОДЫ ФОРМЫ ==========
 const formTranslations = {
    ru: {
-      heroBadge: "✨ Разработка сайтов под ключ ✨",
+      heroBadge: "🛡 Без предоплаты — платите после сдачи сайта",
       h1Part1: "Нужен сайт,",
       h1Part2: "который продаёт?",
-      subText: "Заполните форму — мы напишем вам в выбранный мессенджер",
+      subText:
+         "Заполните форму — мы напишем вам в выбранный мессенджер в течение 15 минут",
+      price1: "💻 Сайт-визитка от $150",
+      price2: "🛒 Магазин от $350",
       namePlace: "Ваше имя",
       contactMethodLabel: "Выберите способ связи",
       contactPlace: "+380 XX XXX XX XX",
       messagePlace: "Кратко опишите задачу: какой сайт нужен, сроки, бюджет",
       submit: "📩 Отправить заявку →",
+      siteLinkText: "Наш сайт",
       trust1: "Без предоплаты",
       trust2: "Код — ваш",
    },
    uk: {
-      heroBadge: "✨ Розробка сайтів під ключ ✨",
+      heroBadge: "🛡 Без передоплати — платите після здачі сайту",
       h1Part1: "Потрібен сайт,",
       h1Part2: "який продає?",
-      subText: "Заповніть форму — ми напишемо вам у обраний месенджер",
+      subText:
+         "Заповніть форму — ми напишемо вам у обраний месенджер протягом 15 хвилин",
+      price1: "💻 Сайт-візитка від $150",
+      price2: "🛒 Магазин від $350",
       namePlace: "Ваше ім'я",
       contactMethodLabel: "Оберіть спосіб зв'язку",
       contactPlace: "+380 XX XXX XX XX",
       messagePlace:
          "Коротко опишіть задачу: який сайт потрібен, терміни, бюджет",
       submit: "📩 Відправити заявку →",
+      siteLinkText: "Наш сайт",
       trust1: "Без передоплати",
       trust2: "Код — ваш",
    },
@@ -45,6 +53,12 @@ function applyFormLang(lang) {
    const subText = document.getElementById("subText");
    if (subText) subText.textContent = t.subText;
 
+   const price1 = document.getElementById("price1");
+   if (price1) price1.textContent = t.price1;
+
+   const price2 = document.getElementById("price2");
+   if (price2) price2.textContent = t.price2;
+
    const nameInput = document.getElementById("userName");
    if (nameInput) nameInput.placeholder = t.namePlace;
 
@@ -62,6 +76,9 @@ function applyFormLang(lang) {
    if (submitButton && !submitButton.classList.contains("success")) {
       submitButton.innerHTML = t.submit;
    }
+
+   const siteLinkText = document.getElementById("siteLinkText");
+   if (siteLinkText) siteLinkText.textContent = t.siteLinkText;
 
    const trust1 = document.getElementById("trust1");
    if (trust1) trust1.textContent = t.trust1;
@@ -99,6 +116,8 @@ const userName = document.getElementById("userName");
 const userContact = document.getElementById("userContact");
 const userMessage = document.getElementById("userMessage");
 const charCounter = document.getElementById("charCounter");
+const websiteHoneypot = document.getElementById("website");
+const formLoadedAt = Date.now();
 
 if (userMessage && charCounter) {
    userMessage.addEventListener("input", () => {
@@ -172,6 +191,14 @@ if (form) {
    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (!validateForm()) return;
+
+      if (websiteHoneypot && websiteHoneypot.value.trim() !== "") {
+         return;
+      }
+
+      if (Date.now() - formLoadedAt < 3000) {
+         return;
+      }
 
       submitBtn.disabled = true;
       submitBtn.innerHTML = "⏳ Отправляем...";
