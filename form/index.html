@@ -136,10 +136,21 @@
             justify-content: center;
             gap: 16px;
             flex-wrap: wrap;
-            font-size: 13px;
-            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 700;
             margin-bottom: 20px;
             text-align: center;
+         }
+
+         .price-row span {
+            background: linear-gradient(
+               135deg,
+               var(--pink),
+               var(--orange),
+               var(--yellow)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
          }
 
          .card {
@@ -377,20 +388,20 @@
       <div class="wrap">
          <div class="logo">&lt;AzaCode/&gt;</div>
          <div class="hero-badge" id="heroBadge">
-            🛡 Без предоплаты — платите после сдачи сайта
+            Фиксированная цена, без сюрпризов
          </div>
          <h1>
             <span id="h1Part1">Нужен сайт,</span>
             <span class="accent" id="h1Part2">который продаёт?</span>
          </h1>
          <p class="sub" id="subText">
-            Заполните форму — мы напишем вам в выбранный мессенджер в течение 15
-            минут
+            Заполните форму — мы напишем вам в выбранный мессенджер в рабочее
+            время. Ночные заявки обработаем с утра
          </p>
 
          <div class="price-row" id="priceRow">
-            <span id="price1">💻 Сайт-визитка от $150</span>
-            <span id="price2">🛒 Магазин от $350</span>
+            <span id="price1">Сайт-визитка от $150</span>
+            <span id="price2">Магазин от $350</span>
          </div>
 
          <div class="card">
