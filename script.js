@@ -132,12 +132,22 @@ if (themeToggle) {
 // ========== МУЛЬТИЯЗЫЧНОСТЬ ==========
 const translations = {
    ru: {
-      heroBadge: "✨ Студия цифровых продуктов ✨",
-      heroTitle1: "Делаем сайты,",
-      heroTitle2: "которые увеличивают продажи",
-      heroDesc: "Сайты под ключ, которые работают на твой бизнес.",
-      orderBtn: "🚀 Заказать сайт",
-      servicesBtn: "Узнать услуги",
+      heroBadge: "Делаем сайты под ключ",
+      heroTitle1: "AI-администратор,",
+      heroTitle2: "который увеличит ваши продажи",
+      heroDesc: "Отвечает клиентам 24/7, записывает их и уведомляет вас.",
+      orderBtn: "Подключить AI",
+      servicesBtn: "Заказать сайт",
+      aiTitle: "AI-администратор",
+      aiDesc:
+         "Принимает записи и заказы 24/7, отвечает клиентам за вас и помогает увеличить продажи.",
+      aiPrefill: "Хочу подключить AI-администратора",
+      priceFrom: "от",
+      perMonth: "/мес",
+      robotPhrases: ["Привет!", "Запишу 24/7", "Отвечу за вас", "Не сплю никогда", "Чем помочь?"],
+      robotFly: "Полетели!",
+      robotBack: "Я на месте!",
+      robotCta: "Напишите нам!",
       aboutTitle: "О нас",
       aboutText:
          " — команда, которая делает лендинги, интернет-магазины и сайты, решающие задачи бизнеса. Пишем чистый код, который остаётся полностью вашим — без ежемесячной абонплаты и привязки к чужим платформам. Работаем под ключ, от идеи до запуска. На связи менеджер — Алекс, ты можешь написать мне:",
@@ -148,7 +158,7 @@ const translations = {
          "Одностраничные сайты для продаж с высокой конверсией. Идеально для запуска товаров и услуг.",
       bizTitle: "Сайты-визитки",
       bizDesc:
-         "Представьте свой бизнес или себя стильно. Адаптивно, современно, запоминающеся.",
+         "Представьте свой бизнес или себя стильно. Адаптивно, современно, запоминающиеся.",
       shopTitle: "Интернет-магазины",
       shopDesc:
          "Полноценные магазины с корзиной, фильтрами и оплатой. Под любой товар.",
@@ -164,9 +174,9 @@ const translations = {
          "Регулярные обновления, правки, бэкапы и защита. Ваш сайт всегда в идеальном состоянии.",
       worksTitle: "Наши работы",
       worksSub: "Реальные проекты, которые мы запустили",
-      p1Tag: "Сайт-визитка",
-      p1Title: "Elena English",
-      p1Desc: "Сайт репетитора английского языка с онлайн‑записью и отзывами",
+      p1Tag: "Интернет-магазин",
+      p1Title: "Milfey",
+      p1Desc: "Магазин вафельных десертов с каталогом, корзиной и онлайн-консультантом",
       p2Tag: "Интернет-магазин",
       p2Title: "Sofyx",
       p2Desc: "Маркетплейс товаров с каталогом, поиском и фильтрами",
@@ -196,12 +206,22 @@ const translations = {
       footerText: " — сайты, которые работают на вас. 2025",
    },
    uk: {
-      heroBadge: "✨ Студія цифрових продуктів ✨",
-      heroTitle1: "Робимо сайти,",
-      heroTitle2: "які збільшують продажі",
-      heroDesc: "Сайти під ключ, які працюють на твій бізнес.",
-      orderBtn: "🚀 Замовити сайт",
-      servicesBtn: "Дізнатись послуги",
+      heroBadge: "Робимо сайти під ключ",
+      heroTitle1: "AI-адміністратор,",
+      heroTitle2: "який збільшить ваші продажі",
+      heroDesc: "Відповідає клієнтам 24/7, записує їх і сповіщає вас.",
+      orderBtn: "Підключити AI",
+      servicesBtn: "Замовити сайт",
+      aiTitle: "AI-адміністратор",
+      aiDesc:
+         "Приймає записи та замовлення 24/7, відповідає клієнтам замість вас і допомагає збільшити продажі.",
+      aiPrefill: "Хочу підключити AI-адміністратора",
+      priceFrom: "від",
+      perMonth: "/міс",
+      robotPhrases: ["Привіт!", "Запишу 24/7", "Відповім за вас", "Ніколи не сплю", "Чим допомогти?"],
+      robotFly: "Полетіли!",
+      robotBack: "Я на місці!",
+      robotCta: "Напишіть нам!",
       aboutTitle: "Про нас",
       aboutText:
          " — команда, яка робить лендинги, інтернет-магазини та сайти, що вирішують задачі бізнесу. Пишемо чистий код, який залишається повністю вашим — без щомісячної абонплати та прив'язки до чужих платформ. Працюємо під ключ, від ідеї до запуску. На зв'язку менеджер — Алекс, ти можеш написати мені:",
@@ -224,9 +244,9 @@ const translations = {
          "Регулярні оновлення, правки, бекапи та захист. Ваш сайт завжди в ідеальному стані.",
       worksTitle: "Наші роботи",
       worksSub: "Реальні проекти, які ми запустили",
-      p1Tag: "Сайт-візитка",
-      p1Title: "Elena English",
-      p1Desc: "Сайт репетитора англійської мови з онлайн‑записом та відгуками",
+      p1Tag: "Інтернет-магазин",
+      p1Title: "Milfey",
+      p1Desc: "Магазин вафельних десертів з каталогом, кошиком та онлайн-консультантом",
       p2Tag: "Інтернет-магазин",
       p2Title: "Sofyx",
       p2Desc: "Маркетплейс товарів з каталогом, пошуком та фільтрами",
@@ -257,12 +277,22 @@ const translations = {
       footerText: " — сайти, які працюють на вас. 2025",
    },
    en: {
-      heroBadge: "✨ Digital Product Studio ✨",
-      heroTitle1: "We build websites",
-      heroTitle2: "that boost your sales",
-      heroDesc: "Turnkey websites that work for your business.",
-      orderBtn: "🚀 Order website",
-      servicesBtn: "View services",
+      heroBadge: "Turnkey websites",
+      heroTitle1: "AI administrator",
+      heroTitle2: "that boosts your sales",
+      heroDesc: "Answers customers 24/7, books them in and notifies you.",
+      orderBtn: "Get AI",
+      servicesBtn: "Order website",
+      aiTitle: "AI Administrator",
+      aiDesc:
+         "Takes bookings and orders 24/7, answers customers for you and helps boost sales.",
+      aiPrefill: "I want to connect the AI administrator",
+      priceFrom: "from",
+      perMonth: "/mo",
+      robotPhrases: ["Hi there!", "Booking 24/7", "Replies for you", "Never sleeps", "How can I help?"],
+      robotFly: "Let's fly!",
+      robotBack: "I'm back!",
+      robotCta: "Message us!",
       aboutTitle: "About Us",
       aboutText:
          " — a team that builds landing pages, online stores, and websites that solve business problems. We write clean code that stays fully yours — no monthly fees, no lock-in to third-party platforms. Turnkey work, from idea to launch. Manager on duty — Alex, feel free to reach out:",
@@ -289,9 +319,9 @@ const translations = {
          "Regular updates, fixes, backups and protection. Your site is always in perfect condition.",
       worksTitle: "Our Works",
       worksSub: "Real projects we have launched",
-      p1Tag: "Business Card",
-      p1Title: "Elena English",
-      p1Desc: "English tutor website with online booking and reviews",
+      p1Tag: "Online Store",
+      p1Title: "Milfey",
+      p1Desc: "Waffle dessert shop with catalog, cart and online assistant",
       p2Tag: "Online Store",
       p2Title: "Sofyx",
       p2Desc: "Product marketplace with catalog, search and filters",
@@ -329,12 +359,14 @@ function updateLanguage(lang) {
    if (!t) return;
 
    // Hero секция
-   const heroBadge = document.querySelector(".hero-badge");
+   window.siteLang = lang;
+
+   const heroBadge = document.querySelector(".hero-badge-text");
    if (heroBadge) heroBadge.textContent = t.heroBadge;
 
-   const heroTitleSpans = document.querySelectorAll(".hero h1 span");
+   const heroTitleSpans = document.querySelectorAll(".hero-title span");
    if (heroTitleSpans[0]) heroTitleSpans[0].textContent = t.heroTitle1;
-   const accentText = document.querySelector(".hero h1 .accent-text");
+   const accentText = document.querySelector(".hero-title .accent-text");
    if (accentText) accentText.textContent = t.heroTitle2;
 
    const heroDesc = document.querySelector(".hero p");
@@ -361,34 +393,24 @@ function updateLanguage(lang) {
    if (servicesSub) servicesSub.textContent = t.servicesSub;
 
    const serviceCards = document.querySelectorAll(".service-card");
-   if (serviceCards[0]) {
-      serviceCards[0].querySelector("h3").textContent = t.landingTitle;
-      serviceCards[0].querySelector("p").textContent = t.landingDesc;
-   }
-   if (serviceCards[1]) {
-      serviceCards[1].querySelector("h3").textContent = t.bizTitle;
-      serviceCards[1].querySelector("p").textContent = t.bizDesc;
-   }
-   if (serviceCards[2]) {
-      serviceCards[2].querySelector("h3").textContent = t.shopTitle;
-      serviceCards[2].querySelector("p").textContent = t.shopDesc;
-   }
-   if (serviceCards[3]) {
-      serviceCards[3].querySelector("h3").textContent = t.adaptTitle;
-      serviceCards[3].querySelector("p").textContent = t.adaptDesc;
-
-      //
-      const price = serviceCards[3].querySelector(".service-price");
-      if (price) price.textContent = t.priceIncluded;
-   }
-   if (serviceCards[4]) {
-      serviceCards[4].querySelector("h3").textContent = t.tildaTitle;
-      serviceCards[4].querySelector("p").textContent = t.tildaDesc;
-   }
-   if (serviceCards[5]) {
-      serviceCards[5].querySelector("h3").textContent = t.supportTitle;
-      serviceCards[5].querySelector("p").textContent = t.supportDesc;
-   }
+   const sData = [
+      [t.aiTitle, t.aiDesc],
+      [t.landingTitle, t.landingDesc],
+      [t.bizTitle, t.bizDesc],
+      [t.shopTitle, t.shopDesc],
+      [t.tildaTitle, t.tildaDesc],
+      [t.supportTitle, t.supportDesc],
+   ];
+   serviceCards.forEach((card, i) => {
+      if (!sData[i]) return;
+      const h3 = card.querySelector("h3");
+      const desc = card.querySelector("p:not(.service-price)");
+      if (h3) h3.textContent = sData[i][0];
+      if (desc) desc.textContent = sData[i][1];
+      const price = card.querySelector(".service-price[data-price]");
+      if (price)
+         price.textContent = `${t.priceFrom} $${price.dataset.price}${price.dataset.monthly ? t.perMonth : ""}`;
+   });
 
    // Работы
    const worksTitle = document.querySelector("#works .section-title");
@@ -862,3 +884,206 @@ if (scrollBtn) {
       });
    });
 }
+
+
+// ========== РОБОТ НА ПЕРВОМ ЭКРАНЕ ==========
+(function () {
+   const hero = document.querySelector(".hero");
+   const flyer = document.getElementById("robotFlyer");
+   if (!hero || !flyer) return;
+   const head = document.getElementById("robotHead");
+   const eyes = document.getElementById("robotEyes");
+   const sparks = document.getElementById("robotSparks");
+   const bubble = document.getElementById("robotBubble");
+   const bubbleText = document.getElementById("robotBubbleText");
+   const mouth = document.getElementById("robotMouth");
+   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+   const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+   let phraseIndex = 0;
+   let flying = false;
+
+   const tr = () => translations[window.siteLang] || translations.ru;
+
+   function say(text) {
+      bubble.style.opacity = 0;
+      setTimeout(() => {
+         bubbleText.textContent = text;
+         bubble.style.opacity = 1;
+         mouth.classList.add("talking");
+         setTimeout(() => mouth.classList.remove("talking"), 900);
+      }, 300);
+   }
+
+   say(tr().robotPhrases[0]);
+   setInterval(() => {
+      if (flying || document.hidden) return;
+      const phrases = tr().robotPhrases;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      say(phrases[phraseIndex]);
+   }, 2600);
+
+   function resetLook() {
+      head.style.transform = "";
+      eyes.style.transform = "";
+      sparks.style.transform = "";
+   }
+
+   // Следит за курсором (только компьютер)
+   if (canHover && !reduceMotion) {
+      hero.addEventListener("mousemove", (e) => {
+         if (flying) return;
+         const r = hero.getBoundingClientRect();
+         const x = (e.clientX - r.left) / r.width - 0.5;
+         const y = (e.clientY - r.top) / r.height - 0.5;
+         // вверх — сильнее, вниз — чуть-чуть, чтобы голова не уходила в корпус
+         const headY = y < 0 ? y * 40 : y * 8;
+         const eyesY = y < 0 ? y * 22 : y * 8;
+         head.style.transform = `translate(${(x * 40).toFixed(1)}px, ${headY.toFixed(1)}px) rotate(${(x * 40).toFixed(1)}deg)`;
+         eyes.style.transform = `translate(${(x * 28).toFixed(1)}px, ${eyesY.toFixed(1)}px)`;
+         sparks.style.transform = `translate(${(-x * 20).toFixed(1)}px, ${(-y * 12).toFixed(1)}px)`;
+      });
+      hero.addEventListener("mouseleave", resetLook);
+   }
+
+   // По клику облетает экран (за текстом) и возвращается
+   const colors = ["#ff1493", "#ffa500", "#ffd700", "#5ff5e0"];
+   flyer.addEventListener("click", () => {
+      if (flying || reduceMotion || !flyer.animate) return;
+      flying = true;
+      hero.classList.add("robot-flying");
+      resetLook();
+      say(tr().robotFly);
+
+      const H = hero.getBoundingClientRect();
+      const F = flyer.getBoundingClientRect();
+      const ox = F.left - H.left;
+      const oy = F.top - H.top;
+      const pts = [
+         [0, 0],
+         [-ox * 0.4, -oy + 20],
+         [-ox * 0.95, -oy * 0.2],
+         [-ox * 0.6, H.height - oy - F.height * 0.8],
+         [-ox * 0.1, -oy * 0.5],
+         [40, -30],
+         [0, 0],
+      ];
+      // два полных оборота в середине полёта
+      const rot = [0, -18, 335, 735, 740, 728, 720];
+      const sc = [1, 0.6, 0.55, 0.55, 0.6, 0.8, 1];
+      const anim = flyer.animate(
+         pts.map((p, k) => ({
+            transform: `translate(${p[0]}px, ${p[1]}px) rotate(${rot[k]}deg) scale(${sc[k]})`,
+         })),
+         { duration: 6000, easing: "cubic-bezier(.45,0,.55,1)" },
+      );
+
+      const trail = setInterval(() => {
+         const r = flyer.getBoundingClientRect();
+         const H2 = hero.getBoundingClientRect();
+         const dot = document.createElement("div");
+         dot.className = "robot-trail";
+         dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+         dot.style.left = r.left - H2.left + r.width / 2 + "px";
+         dot.style.top = r.top - H2.top + r.height * 0.85 + "px";
+         hero.appendChild(dot);
+         requestAnimationFrame(() => {
+            dot.style.opacity = 0;
+            dot.style.transform = "scale(.2) translateY(20px)";
+         });
+         setTimeout(() => dot.remove(), 650);
+      }, 45);
+
+      anim.onfinish = () => {
+         clearInterval(trail);
+         flying = false;
+         hero.classList.remove("robot-flying");
+         say(tr().robotBack);
+      };
+   });
+})();
+
+// ========== КНОПКА «ПОДКЛЮЧИТЬ AI» ==========
+// Открывает чат ассистента; если виджет не загрузился — форма с готовым текстом
+(function () {
+   const btn = document.getElementById("heroAiBtn");
+   if (!btn) return;
+   btn.addEventListener("click", (e) => {
+      if (window.AzaCodeWidget && typeof window.AzaCodeWidget.open === "function") {
+         e.preventDefault();
+         window.AzaCodeWidget.open();
+         return;
+      }
+      const msg = document.getElementById("userMessage");
+      if (msg && !msg.value.trim()) msg.value = tr_ai();
+   });
+   function tr_ai() {
+      const t = translations[window.siteLang] || translations.ru;
+      return t.aiPrefill;
+   }
+})();
+
+// ========== РОБОТ НА ТЕЛЕФОНЕ: СОБИРАЕТСЯ ПРИ ПРОКРУТКЕ ==========
+(function () {
+   const robot = document.getElementById("mRobot");
+   if (!robot) return;
+   const mq = window.matchMedia("(max-width: 900px)");
+   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+   const bubble = document.getElementById("mRobotBubble");
+   const parts = [...robot.querySelectorAll(".m-part")];
+   // откуда прилетает каждая часть (доли ширины/высоты экрана), поворот и задержка
+   const from = {
+      head: { x: 0.78, y: -0.62, r: -35, d: 0 },
+      armR: { x: -0.05, y: -0.72, r: 80, d: 0.06 },
+      body: { x: -0.12, y: -0.38, r: 25, d: 0.14 },
+      armL: { x: 0.82, y: -0.2, r: -90, d: 0.22 },
+      flame: { x: 0.45, y: 0.25, r: 140, d: 0.3 },
+   };
+   const ease = (t) => 1 - Math.pow(1 - t, 3);
+   let ticking = false;
+
+   function update() {
+      ticking = false;
+      if (!mq.matches) return;
+      const t = translations[window.siteLang] || translations.ru;
+      bubble.textContent = t.robotCta;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const p = max > 0 ? Math.min(1, window.scrollY / max) : 1;
+      const W = window.innerWidth;
+      const H = window.innerHeight;
+      let sum = 0;
+      parts.forEach((el) => {
+         const f = from[el.dataset.k];
+         const k = reduceMotion ? 1 : ease(Math.max(0, Math.min(1, (p - f.d) / (0.97 - f.d))));
+         sum += k;
+         const x = f.x * W * (1 - k);
+         const y = f.y * H * (1 - k);
+         const r = f.r * (1 - k);
+         const sc = 0.7 + 0.3 * k;
+         el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) rotate(${r.toFixed(1)}deg) scale(${sc.toFixed(2)})`;
+         el.style.opacity = (0.35 + 0.65 * k).toFixed(2);
+      });
+      robot.classList.toggle("done", sum / parts.length > 0.995);
+   }
+
+   function onScroll() {
+      if (!ticking) {
+         ticking = true;
+         requestAnimationFrame(update);
+      }
+   }
+
+   window.addEventListener("scroll", onScroll, { passive: true });
+   window.addEventListener("resize", onScroll);
+   update();
+
+   // Собранный робот: открывает чат, а если виджета нет — ведёт к форме
+   robot.addEventListener("click", () => {
+      if (!robot.classList.contains("done")) return;
+      if (window.AzaCodeWidget && typeof window.AzaCodeWidget.open === "function") {
+         window.AzaCodeWidget.open();
+         return;
+      }
+      const form = document.getElementById("contactForm");
+      if (form) form.scrollIntoView({ behavior: "smooth" });
+   });
+})();
