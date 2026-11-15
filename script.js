@@ -967,14 +967,15 @@ if (scrollBtn) {
          [40, -30],
          [0, 0],
       ];
-      // два полных оборота в середине полёта
-      const rot = [0, -18, 335, 735, 740, 728, 720];
+      // лёгкий наклон + два оборота вокруг своей оси (как юла)
+      const tilt = [0, -12, -14, 10, 12, 5, 0];
+      const spin = [0, 90, 360, 540, 720, 720, 720];
       const sc = [1, 0.6, 0.55, 0.55, 0.6, 0.8, 1];
       const anim = flyer.animate(
          pts.map((p, k) => ({
-            transform: `translate(${p[0]}px, ${p[1]}px) rotate(${rot[k]}deg) scale(${sc[k]})`,
+            transform: `translate(${p[0]}px, ${p[1]}px) rotate(${tilt[k]}deg) rotateY(${spin[k]}deg) scale(${sc[k]})`,
          })),
-         { duration: 6000, easing: "cubic-bezier(.45,0,.55,1)" },
+         { duration: 9000, easing: "cubic-bezier(.45,0,.55,1)" },
       );
 
       const trail = setInterval(() => {
