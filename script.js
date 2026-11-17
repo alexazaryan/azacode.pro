@@ -133,6 +133,8 @@ if (themeToggle) {
 const translations = {
    ru: {
       heroBadge: "Делаем сайты под ключ",
+      aiNew1: "AI-ассистент для бизнеса —",
+      aiNew2: "протестировать бесплатно",
       heroTitle1: "AI-администратор,",
       heroTitle2: "который увеличит ваши продажи",
       heroDesc: "Отвечает клиентам 24/7, записывает их и уведомляет вас.",
@@ -207,6 +209,8 @@ const translations = {
    },
    uk: {
       heroBadge: "Робимо сайти під ключ",
+      aiNew1: "AI-асистент для бізнесу —",
+      aiNew2: "протестувати безкоштовно",
       heroTitle1: "AI-адміністратор,",
       heroTitle2: "який збільшить ваші продажі",
       heroDesc: "Відповідає клієнтам 24/7, записує їх і сповіщає вас.",
@@ -278,6 +282,8 @@ const translations = {
    },
    en: {
       heroBadge: "Turnkey websites",
+      aiNew1: "AI assistant for business —",
+      aiNew2: "try it free",
       heroTitle1: "AI administrator",
       heroTitle2: "that boosts your sales",
       heroDesc: "Answers customers 24/7, books them in and notifies you.",
@@ -363,6 +369,11 @@ function updateLanguage(lang) {
 
    const heroBadge = document.querySelector(".hero-badge-text");
    if (heroBadge) heroBadge.textContent = t.heroBadge;
+
+   const aiNew1 = document.querySelector(".ai-new-t1");
+   if (aiNew1 && t.aiNew1) aiNew1.textContent = t.aiNew1;
+   const aiNew2 = document.querySelector(".ai-new-t2");
+   if (aiNew2 && t.aiNew2) aiNew2.textContent = t.aiNew2;
 
    const heroTitleSpans = document.querySelectorAll(".hero-title span");
    if (heroTitleSpans[0]) heroTitleSpans[0].textContent = t.heroTitle1;
